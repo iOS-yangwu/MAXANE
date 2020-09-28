@@ -85,7 +85,7 @@ void MAXAdvertANEDispatchStatusEventAsyn(NSString  * type ,NSString *jsonString)
 
 typedef enum {
     //sdk config
-    initializedConfig = 0,
+    InitializedConfig = 0,
     //interstitial
     InterstitialDidLoad,
     InterstitialFailToLoad,
@@ -94,20 +94,20 @@ typedef enum {
     InterstitialClick,
     InterstitialFailToDisplay,
     //rewardVideo
-    rewardVideoDidLoad,
-    rewardVideoFailToLoad,
-    rewardVideoDisplay,
-    rewardVideoHide,
-    rewardVideoClick,
-    rewardVideoFailToDisplay,
-    rewardVideodidComplete,
-    rewardVideoDidReward,
-    rewardVideodidStart
+    RewardVideoDidLoad = 7,
+    RewardVideoFailToLoad,
+    RewardVideoDisplay,
+    RewardVideoHide,
+    RewardVideoClick,
+    RewardVideoFailToDisplay,
+    RewardVideoDidComplete = 13,
+    RewardVideoDidReward,
+    RewardVideoDidStart
     
     
 } MAXAdvertANEEvent;
 
-NSString* const initializedConfigCode = @"MAX_InitializedConfig_ALConsentDialogStateApplies";
+NSString* const InitializedConfigCode = @"MAX_InitializedConfig_ALConsentDialogStateApplies";
 
 //interstitial
 NSString* const InterstitialDidLoadCode = @"MAX_InterstitialDidLoad";
@@ -118,15 +118,15 @@ NSString* const InterstitialClickCode = @"MAX_InterstitialClick";
 NSString* const InterstitialFailToDisplayCode = @"MAX_InterstitialFailToDisplay";
 
 //rewardVideo
-NSString* const rewardVideoDidLoadCode = @"MAX_RewardVideoDidLoad";
-NSString* const rewardVideoFailToLoadCode = @"MAX_RewardVideoFailToLoad";
-NSString* const rewardVideoDisplayCode = @"MAX_RewardVideoDisplay";
-NSString* const rewardVideoHideCode = @"MAX_RewardVideoHide";
-NSString* const rewardVideoClickCode = @"MAX_RewardVideoClick";
-NSString* const rewardVideoFailToDisplayCode = @"MAX_RewardVideoFailToDisplay";
-NSString* const rewardVideodidCompleteCode = @"MAX_RewardVideodidComplete";
-NSString* const rewardVideoDidRewardCode = @"MAX_RewardVideoDidReward";
-NSString* const rewardVideodidStartCode = @"MAX_RewardVideodidStart";
+NSString* const RewardVideoDidLoadCode = @"MAX_RewardVideoDidLoad";
+NSString* const RewardVideoFailToLoadCode = @"MAX_RewardVideoFailToLoad";
+NSString* const RewardVideoDisplayCode = @"MAX_RewardVideoDisplay";
+NSString* const RewardVideoHideCode = @"MAX_RewardVideoHide";
+NSString* const RewardVideoClickCode = @"MAX_RewardVideoClick";
+NSString* const RewardVideoFailToDisplayCode = @"MAX_RewardVideoFailToDisplay";
+NSString* const RewardVideoDidCompleteCode = @"rewardVideoDidComplete";
+NSString* const RewardVideoDidRewardCode = @"MAX_RewardVideoDidReward";
+NSString* const RewardVideoDidStartCode = @"MAX_RewardVideoDidStart";
 
 
 

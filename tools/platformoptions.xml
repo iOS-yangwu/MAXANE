@@ -1,6 +1,6 @@
 <platform xmlns="http://ns.adobe.com/air/extension/33.1">
     <description>KGAdLGrt</description>
-    <copyright>LGAdvert</copyright>
+    <copyright>MAXAdvert</copyright>
     <linkerOptions>
         <option>-ios_version_min 8.0</option>
         <option>-lclang_rt.ios</option>
@@ -41,22 +41,45 @@
         <option>-framework CloudKit</option>
         <option>-framework GameKit</option>
         <option>-framework Twitter</option>
+<!--        <option>-framework AppTrackingTransparency</option>-->
         <option>-lsqlite3</option>
         <option>-lc++</option>
         <option>-lxml2</option>
         <option>-lz</option>
         <option>-lz.1.2.5</option>
+        <option>-lbz2.1.0</option>
         <option>-lresolv.9</option>
     </linkerOptions>
     
     <packagedDependencies>
 
-
-        <packagedDependency>LightGameSDK.framework</packagedDependency>
-      
-
+<!--        <packagedDependency>AppTrackingTransparency.framework</packagedDependency>-->
         
+        <packagedDependency>AppLovinMediationGoogleAdapter.framework</packagedDependency>
+        <packagedDependency>GoogleMobileAds.framework</packagedDependency>
+        <packagedDependency>PersonalizedAdConsent.framework</packagedDependency>
         
+        <packagedDependency>AppLovinSDK.framework</packagedDependency>
+        
+        <packagedDependency>AppLovinMediationFacebookAdapter.framework</packagedDependency>
+        <packagedDependency>FBAudienceNetwork.framework</packagedDependency>
+        <packagedDependency>FBAudienceNetworkBiddingKit.framework</packagedDependency>
+        <packagedDependency>FBSDKCoreKit.framework</packagedDependency>
+        
+        <packagedDependency>AppLovinMediationIronSourceAdapter.framework</packagedDependency>
+        <packagedDependency>IronSource.framework</packagedDependency>
+        
+        <packagedDependency>AppLovinMediationByteDanceAdapter.framework</packagedDependency>
+        <packagedDependency>BUAdSDK.framework</packagedDependency>
+        <packagedDependency>BUFoundation.framework</packagedDependency>
+        
+        <packagedDependency>AppLovinMediationUnityAdsAdapter.framework</packagedDependency>
+        <packagedDependency>UnityAds.framework</packagedDependency>
+        
+<!--        <packagedDependency>AppLovinMediationVungleAdapter.framework</packagedDependency>-->
+<!--        <packagedDependency>VungleSDK.framework</packagedDependency>-->
+    
+    
     </packagedDependencies>
     
 </platform>

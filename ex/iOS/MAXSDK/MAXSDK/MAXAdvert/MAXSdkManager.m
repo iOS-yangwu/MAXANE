@@ -17,9 +17,10 @@
 
     [[ALSdk shared] initializeSdkWithCompletionHandler:^(ALSdkConfiguration * _Nonnull configuration) {
         
+        [[ALSdk shared]showMediationDebugger];
         if (configuration.consentDialogState == ALConsentDialogStateApplies) {
             
-            MAXAdvertSendANEMessage(initializedConfig, initializedConfigCode, @"", @"");
+            MAXAdvertSendANEMessage(InitializedConfig, InitializedConfigCode, @"", @"");
         }
     }];
 }

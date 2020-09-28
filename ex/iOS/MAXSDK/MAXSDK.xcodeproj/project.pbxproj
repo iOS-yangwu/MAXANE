@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6614554125208C46000A7CB0 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6614554025208C46000A7CB0 /* AppTrackingTransparency.framework */; };
 		663018C82519FBE4009FF0F7 /* MAXAdvertANEUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 663018C42519FBE4009FF0F7 /* MAXAdvertANEUtils.m */; };
 		663018C92519FBE4009FF0F7 /* MAXAdvertANE.m in Sources */ = {isa = PBXBuildFile; fileRef = 663018C72519FBE4009FF0F7 /* MAXAdvertANE.m */; };
 		663018CC251A0103009FF0F7 /* MAXInterstitialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 663018CB251A0103009FF0F7 /* MAXInterstitialManager.m */; };
-		663018D0251A0385009FF0F7 /* AppLovinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663018CF251A0385009FF0F7 /* AppLovinSDK.framework */; };
 		665F2EE9251AF46500C6B7A0 /* MAXSdkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 665F2EE8251AF46500C6B7A0 /* MAXSdkManager.m */; };
 		665F2EEC251B180100C6B7A0 /* MAXRewardVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 665F2EEB251B180100C6B7A0 /* MAXRewardVideoManager.m */; };
 		666082AA236A86A70029F94F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666082A9236A86A60029F94F /* CoreFoundation.framework */; };
@@ -36,6 +36,7 @@
 		66B566D7228A65A20012F5A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B566D6228A65A20012F5A6 /* UIKit.framework */; };
 		66B566D9228A65AB0012F5A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B566D8228A65AB0012F5A6 /* Foundation.framework */; };
 		66B566DB228A65B40012F5A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B566DA228A65B40012F5A6 /* CoreGraphics.framework */; };
+		66D581F425209A8B00DDB485 /* AppLovinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D581F225209A8A00DDB485 /* AppLovinSDK.framework */; };
 		66F19B1D2372D815004540CE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F19B1C2372D815004540CE /* AudioToolbox.framework */; };
 		66F19B1F2372D824004540CE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F19B1E2372D824004540CE /* CFNetwork.framework */; };
 		66F19B212372D873004540CE /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F19B202372D873004540CE /* CoreMedia.framework */; };
@@ -58,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6614554025208C46000A7CB0 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		663018C32519FBE4009FF0F7 /* MAXAdvertANE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXAdvertANE.h; sourceTree = "<group>"; };
 		663018C42519FBE4009FF0F7 /* MAXAdvertANEUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXAdvertANEUtils.m; sourceTree = "<group>"; };
 		663018C52519FBE4009FF0F7 /* MAXFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXFunctions.h; sourceTree = "<group>"; };
@@ -65,8 +67,6 @@
 		663018C72519FBE4009FF0F7 /* MAXAdvertANE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXAdvertANE.m; sourceTree = "<group>"; };
 		663018CA251A0103009FF0F7 /* MAXInterstitialManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAXInterstitialManager.h; sourceTree = "<group>"; };
 		663018CB251A0103009FF0F7 /* MAXInterstitialManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAXInterstitialManager.m; sourceTree = "<group>"; };
-		663018CE251A0382009FF0F7 /* AppLovinSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AppLovinSDKResources.bundle; sourceTree = "<group>"; };
-		663018CF251A0385009FF0F7 /* AppLovinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppLovinSDK.framework; sourceTree = "<group>"; };
 		665F2EE7251AF46500C6B7A0 /* MAXSdkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAXSdkManager.h; sourceTree = "<group>"; };
 		665F2EE8251AF46500C6B7A0 /* MAXSdkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAXSdkManager.m; sourceTree = "<group>"; };
 		665F2EEA251B180100C6B7A0 /* MAXRewardVideoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAXRewardVideoManager.h; sourceTree = "<group>"; };
@@ -98,6 +98,8 @@
 		66B566D8228A65AB0012F5A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		66B566DA228A65B40012F5A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		66B566E0228A6A050012F5A6 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
+		66D581F225209A8A00DDB485 /* AppLovinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppLovinSDK.framework; sourceTree = "<group>"; };
+		66D581F325209A8A00DDB485 /* AppLovinSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AppLovinSDKResources.bundle; sourceTree = "<group>"; };
 		66F19B1C2372D815004540CE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
 		66F19B1E2372D824004540CE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		66F19B202372D873004540CE /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
@@ -112,15 +114,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6614554125208C46000A7CB0 /* AppTrackingTransparency.framework in Frameworks */,
 				66F19B292372D8C8004540CE /* SystemConfiguration.framework in Frameworks */,
 				66F19B272372D8AE004540CE /* Security.framework in Frameworks */,
 				66F19B252372D89E004540CE /* SafariServices.framework in Frameworks */,
 				66F19B232372D885004540CE /* CoreMotion.framework in Frameworks */,
 				66F19B212372D873004540CE /* CoreMedia.framework in Frameworks */,
+				66D581F425209A8B00DDB485 /* AppLovinSDK.framework in Frameworks */,
 				66F19B1F2372D824004540CE /* CFNetwork.framework in Frameworks */,
 				66F19B1D2372D815004540CE /* AudioToolbox.framework in Frameworks */,
 				66938FBD2370630400A3BD48 /* CoreImage.framework in Frameworks */,
-				663018D0251A0385009FF0F7 /* AppLovinSDK.framework in Frameworks */,
 				66938FBB237062FF00A3BD48 /* LocalAuthentication.framework in Frameworks */,
 				66938FB9237062FA00A3BD48 /* VideoToolbox.framework in Frameworks */,
 				66938F79236FD32D00A3BD48 /* libresolv.9.tbd in Frameworks */,
@@ -151,8 +154,7 @@
 		663018CD251A0332009FF0F7 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
-				663018CF251A0385009FF0F7 /* AppLovinSDK.framework */,
-				663018CE251A0382009FF0F7 /* AppLovinSDKResources.bundle */,
+				66D581F125209A8A00DDB485 /* Applovin */,
 			);
 			path = ThirdLib;
 			sourceTree = "<group>";
@@ -217,6 +219,7 @@
 		66B566C1228A651D0012F5A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6614554025208C46000A7CB0 /* AppTrackingTransparency.framework */,
 				66F19B282372D8C8004540CE /* SystemConfiguration.framework */,
 				66F19B262372D8AE004540CE /* Security.framework */,
 				66F19B242372D89E004540CE /* SafariServices.framework */,
@@ -263,6 +266,15 @@
 				665F2EEB251B180100C6B7A0 /* MAXRewardVideoManager.m */,
 			);
 			path = MAXAdvert;
+			sourceTree = "<group>";
+		};
+		66D581F125209A8A00DDB485 /* Applovin */ = {
+			isa = PBXGroup;
+			children = (
+				66D581F225209A8A00DDB485 /* AppLovinSDK.framework */,
+				66D581F325209A8A00DDB485 /* AppLovinSDKResources.bundle */,
+			);
+			path = Applovin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +467,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MAXSDK/ThirdLib",
+					"$(PROJECT_DIR)/MAXSDK/ThirdLib/Applovin",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -481,6 +494,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MAXSDK/ThirdLib",
+					"$(PROJECT_DIR)/MAXSDK/ThirdLib/Applovin",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

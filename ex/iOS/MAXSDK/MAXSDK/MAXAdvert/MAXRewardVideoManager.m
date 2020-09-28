@@ -61,7 +61,7 @@
     
     if (ad.format == MAAdFormat.rewarded) {
      
-        MAXAdvertSendANEMessage(rewardVideoClick, rewardVideoClickCode, @"", @"");
+        MAXAdvertSendANEMessage(RewardVideoClick, RewardVideoClickCode, @"", @"");
     }
 }
 
@@ -69,7 +69,7 @@
     
     if (ad.format == MAAdFormat.rewarded) {
      
-        MAXAdvertSendANEMessage(rewardVideoDisplay,rewardVideoDisplayCode,@"",@"");
+        MAXAdvertSendANEMessage(RewardVideoDisplay,RewardVideoDisplayCode,@"",@"");
     }
 }
 
@@ -77,20 +77,20 @@
     
     if (ad.format == MAAdFormat.rewarded) {
         
-        MAXAdvertSendANEMessage(rewardVideoFailToDisplay,rewardVideoFailToDisplayCode, @"errorCode", [NSString stringWithFormat:@"%ld",(long)errorCode]);
+        MAXAdvertSendANEMessage(RewardVideoFailToDisplay,RewardVideoFailToDisplayCode, @"errorCode", [NSString stringWithFormat:@"%ld",(long)errorCode]);
     }
 }
 
 - (void)didFailToLoadAdForAdUnitIdentifier:(nonnull NSString *)adUnitIdentifier withErrorCode:(NSInteger)errorCode {
     
-    MAXAdvertSendANEMessage(rewardVideoFailToLoad, rewardVideoFailToDisplayCode, @"errorCode", [NSString stringWithFormat:@"%ld",(long)errorCode]);
+    MAXAdvertSendANEMessage(RewardVideoFailToLoad, RewardVideoFailToDisplayCode, @"errorCode", [NSString stringWithFormat:@"%ld",(long)errorCode]);
 }
 
 - (void)didHideAd:(nonnull MAAd *)ad {
     
     if (ad.format == MAAdFormat.rewarded) {
         
-        MAXAdvertSendANEMessage(rewardVideoHide, rewardVideoHideCode, @"", @"");
+        MAXAdvertSendANEMessage(RewardVideoHide, RewardVideoHideCode, @"", @"");
     }
 }
 
@@ -98,23 +98,23 @@
     
     if (ad.format == MAAdFormat.rewarded) {
         
-        MAXAdvertSendANEMessage(rewardVideoDidLoad, rewardVideoDidLoadCode, @"", @"");
+        MAXAdvertSendANEMessage(RewardVideoDidLoad, RewardVideoDidLoadCode, @"", @"");
     }
 }
 
 - (void)didCompleteRewardedVideoForAd:(nonnull MAAd *)ad {
     
-    MAXAdvertSendANEMessage(rewardVideodidComplete, rewardVideodidCompleteCode, @"", @"");
+    MAXAdvertSendANEMessage(RewardVideoDidComplete, RewardVideoDidCompleteCode, @"", @"");
 }
 
 - (void)didRewardUserForAd:(nonnull MAAd *)ad withReward:(nonnull MAReward *)reward {
     
-    MAXAdvertSendANEMessage(rewardVideoDidReward, rewardVideoDidRewardCode, @"", @"");
+    MAXAdvertSendANEMessage(RewardVideoDidReward, RewardVideoDidRewardCode, @"", @"");
 }
 
 - (void)didStartRewardedVideoForAd:(nonnull MAAd *)ad {
     
-    MAXAdvertSendANEMessage(rewardVideodidStart, rewardVideodidStartCode, @"", @"");
+    MAXAdvertSendANEMessage(RewardVideoDidStart, RewardVideoDidStartCode, @"", @"");
 }
 
 @end

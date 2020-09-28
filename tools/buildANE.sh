@@ -1,36 +1,70 @@
 #!/bin/sh
 
 rm -rf tmp
-rm -f LGAdvert.ane
+rm -f MAXAdvert.ane
 
 RootPath=$(cd "$(dirname "$0")"; pwd)
 echo $RootPath
 
 mkdir tmp
-cp -r ../Lib/bin/LGAdvertLib.swc  tmp
+cp -r ../Lib/bin/MAXAdvertLib.swc  tmp
 
 
-# AnyThink
-cp -r ../ex/iOS/LGSDK/LGSDK/Framework/LightGameSDK.framework tmp
-cp -r ../ex/iOS/LGSDK/LGSDK/Framework/BDTuringResource.bundle tmp
-cp -r ../ex/iOS/LGSDK/LGSDK/Framework/BUAdSDK.bundle tmp
-cp -r ../ex/iOS/LGSDK/LGSDK/Framework/IESPhoto.bundle tmp
-cp -r ../ex/iOS/LGSDK/LGSDK/Framework/LightGameSDK.bundle tmp
+# Admob
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Admob/AppLovinMediationGoogleAdapter.framework tmp
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Admob/GoogleMobileAds.framework tmp
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Admob/PersonalizedAdConsent.framework tmp
+Admob="AppLovinMediationGoogleAdapter.framework GoogleMobileAds.framework PersonalizedAdConsent.framework"
 
-lightGame="LightGameSDK.framework BDTuringResource.bundle BUAdSDK.bundle IESPhoto.bundle LightGameSDK.bundle"
+# Applovin
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Applovin/AppLovinSDK.framework tmp
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Applovin/AppLovinSDKResources.bundle tmp
+Applovin="AppLovinSDK.framework AppLovinSDKResources.bundle"
 
+# Facebook
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Facebook/AppLovinMediationFacebookAdapter.framework tmp
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Facebook/FBAudienceNetwork.framework tmp
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Facebook/FBAudienceNetworkBiddingKit.framework tmp
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Facebook/FBSDKCoreKit.framework tmp
+Facebook="AppLovinMediationFacebookAdapter.framework FBAudienceNetwork.framework FBAudienceNetworkBiddingKit.framework FBSDKCoreKit.framework"
 
-cp ./ios/libLGSDK.a tmp
+# IronSource
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/IronSource/AppLovinMediationIronSourceAdapter.framework tmp
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/IronSource/IronSource.framework tmp
+IronSource="AppLovinMediationIronSourceAdapter.framework IronSource.framework"
+
+# Pangle
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Pangle/AppLovinMediationByteDanceAdapter.framework tmp
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Pangle/BUAdSDK.bundle tmp
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Pangle/BUAdSDK.framework tmp
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Pangle/BUFoundation.framework tmp
+Pangle="AppLovinMediationByteDanceAdapter.framework BUAdSDK.bundle BUAdSDK.framework BUFoundation.framework"
+
+# UnityAds
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/UnityAds/AppLovinMediationUnityAdsAdapter.framework tmp
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/UnityAds/UnityAds.framework tmp
+UnityAds="AppLovinMediationUnityAdsAdapter.framework UnityAds.framework"
+
+# Vungle
+#cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Vungle/AppLovinMediationVungleAdapter.framework tmp
+#cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Vungle/VungleSDK.framework tmp
+#Vungle="AppLovinMediationVungleAdapter.framework VungleSDK.framework"
+
+# System
+#cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/System/AppTrackingTransparency.framework tmp
+#System="AppTrackingTransparency.framework"
+
+cp ./ios/libMAXSDK.a tmp
 
 cd tmp
 
 
-pathString="${lightGame}"
+pathString="${Admob} ${Applovin} ${Facebook} ${IronSource} ${Pangle} ${UnityAds}"
 
-unzip ./LGAdvertLib.swc
+unzip ./MAXAdvertLib.swc
 
 #iOS
-adt -package -target ane ../LGAdvert.ane ../extension.xml -swc LGAdvertLib.swc -platform iPhone-ARM -platformoptions ../platformoptions.xml library.swf ${pathString} libLGSDK.a
+adt -package -target ane ../MAXAdvert.ane ../extension.xml -swc MAXAdvertLib.swc -platform iPhone-ARM -platformoptions ../platformoptions.xml library.swf ${pathString} libMAXSDK.a
 
 
 cd ..
