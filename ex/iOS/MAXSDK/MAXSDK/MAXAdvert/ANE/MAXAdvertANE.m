@@ -10,6 +10,7 @@
 #import "MAXSdkManager.h"
 #import "MAXInterstitialManager.h"
 #import "MAXRewardVideoManager.h"
+#import "MAXBannerManager.h"
 
 #pragma mark - sdk
 MAX_ANE_FUNCTION(INIT_SDK){
@@ -103,6 +104,35 @@ MAX_ANE_FUNCTION(SHOW_REWARDVIDEO_FOR_PLACEMENT){
     return NULL;
 }
 
+#pragma mark - banner
+MAX_ANE_FUNCTION(LOAD_BANNER){
+    
+    NSString *unitId = MAXAdvertGetStringFromFREObject(argv[0]);
+    int align = MAXAdvertGetIntFromFREObject(argv[1]);
+    [[MAXBannerManager shareManager] loadAdWithUnitId:unitId align:align];
+    return NULL;
+    
+}
+
+MAX_ANE_FUNCTION(SET_BANNER_EXTRA_PARAMETER){
+    
+    NSString *key = MAXAdvertGetStringFromFREObject(argv[0]);
+    NSString *value = MAXAdvertGetStringFromFREObject(argv[1]);
+    [[MAXBannerManager shareManager] setExtraParameterForKey:key value:value];
+    return NULL;
+}
+
+MAX_ANE_FUNCTION(HIDE_BANNER){
+    
+    [[MAXBannerManager shareManager] hideBanner];
+    return NULL;
+}
+
+MAX_ANE_FUNCTION(SHOW_BANNER){
+    
+    [[MAXBannerManager shareManager] showBanner];
+    return NULL;
+}
 
 #pragma mark- FLASH
 void MAXANEInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet)
@@ -127,7 +157,13 @@ void MAXANEInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, ui
         MAX_MAP_FUNCTION(SET_REWARDVIDEO_EXTRA_PARAMETER, NULL),
         MAX_MAP_FUNCTION(ISREADY_REWARDVIDEO, NULL),
         MAX_MAP_FUNCTION(SHOW_REWARDVIDEO, NULL),
-        MAX_MAP_FUNCTION(SHOW_REWARDVIDEO_FOR_PLACEMENT, NULL)
+        MAX_MAP_FUNCTION(SHOW_REWARDVIDEO_FOR_PLACEMENT, NULL),
+        
+        //banner
+        MAX_MAP_FUNCTION(LOAD_BANNER,NULL),
+        MAX_MAP_FUNCTION(SET_BANNER_EXTRA_PARAMETER,NULL),
+        MAX_MAP_FUNCTION(HIDE_BANNER,NULL),
+        MAX_MAP_FUNCTION(SHOW_BANNER,NULL)
     };
     
     *numFunctionsToTest = sizeof(func) / sizeof(FRENamedFunction);

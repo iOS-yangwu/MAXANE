@@ -41,6 +41,15 @@ public class MAXAdvert extends MovieClip implements IEventDispatcher
 	private var rewardVideoDidStartListener:Function;
 	private var _main:MovieClip = null;
 
+	//banner
+	private var bannerDidLoadListener:Function;
+	private var bannerFailToLoadListener:Function;
+	private var bannerDisplayListener:Function;
+	private var bannerHideListener:Function;
+	private var bannerClickListener:Function;
+	private var bannerFailToDisplayListener:Function;
+	private var bannerDidCollapseListener:Function;
+	private var bannerDidExpandAdListener:Function;
 
 	//sdk
 	public  function  setInitializeSdkFinishBlockListener(listener:Function):void{
@@ -112,6 +121,38 @@ public class MAXAdvert extends MovieClip implements IEventDispatcher
 		this.rewardVideoDidStartListener = listener;
 	}
 
+	//banner
+	public  function  setBannerDidLoadListener(listener:Function):void{
+		this.bannerDidLoadListener = listener;
+	}
+
+	public  function  setBannerFailToLoadListener(listener:Function):void{
+		this.bannerFailToLoadListener = listener;
+	}
+
+	public  function  setBannerDisplayListener(listener:Function):void{
+		this.bannerDisplayListener = listener;
+	}
+
+	public  function  setBannerHideListener(listener:Function):void{
+		this.bannerHideListener = listener;
+	}
+
+	public  function  setBannerClickListener(listener:Function):void{
+		this.bannerClickListener = listener;
+	}
+
+	public  function  setBannerFailToDisplayListener(listener:Function):void{
+		this.bannerFailToDisplayListener = listener;
+	}
+
+	public  function  setBannerDidCollapseListener(listener:Function):void{
+		this.bannerDidCollapseListener = listener;
+	}
+
+	public  function  setBannerDidExpandAdListener(listener:Function):void{
+		this.bannerDidExpandAdListener = listener;
+	}
 
 	///================ sdk config ================
 
@@ -342,6 +383,78 @@ public class MAXAdvert extends MovieClip implements IEventDispatcher
 		}
 	}
 
+	/**
+	 * @brief loadBanner
+	 */
+	public static function loadBanner(unitId:String,align:int):void{
+
+		if (_isIOS()){
+
+			MAXAdvert.getInstance().extContext.call(MAXFunctions.LOAD_BANNER,unitId,align);
+
+		}else if (_isAndroid()){
+
+
+		}else{
+
+			trace("MAX-Function-loadBanner-Not a Android/iOS module");
+		}
+	}
+
+	/**
+	 * @brief setBannerExtraParameter
+	 */
+	public static function setBannerExtraParameter(key:String,value:String):void{
+
+		if (_isIOS()){
+
+			MAXAdvert.getInstance().extContext.call(MAXFunctions.SET_BANNER_EXTRA_PARAMETER,key,value);
+
+		}else if (_isAndroid()){
+
+
+		}else{
+
+			trace("MAX-Function-setBannerExtraParameter-Not a Android/iOS module");
+		}
+	}
+
+	/**
+	 * @brief hideBanner
+	 */
+	public static function hideBanner():void{
+
+		if (_isIOS()){
+
+			MAXAdvert.getInstance().extContext.call(MAXFunctions.HIDE_BANNER);
+
+		}else if (_isAndroid()){
+
+
+		}else{
+
+			trace("MAX-Function-hideBanner-Not a Android/iOS module");
+		}
+	}
+
+	/**
+	 * @brief showBanner
+	 */
+	public static function showBanner():void{
+
+		if (_isIOS()){
+
+			MAXAdvert.getInstance().extContext.call(MAXFunctions.SHOW_BANNER);
+
+		}else if (_isAndroid()){
+
+
+		}else{
+
+			trace("MAX-Function-showBanner-Not a Android/iOS module");
+		}
+	}
+
 	private static var sFunctionTicker:int;
 	private static var sFunctionMap:Object = new Object();
 	public static function functionToString(name:String,f:Function,singleInstance:Boolean):String{
@@ -380,6 +493,7 @@ public class MAXAdvert extends MovieClip implements IEventDispatcher
 			}
 				break;
 
+			//interstitial
 			case MAXPrivateConst.InterstitialDidLoad:
 			{
 				if(this.interstitialDidLoadListener != null){
@@ -428,6 +542,7 @@ public class MAXAdvert extends MovieClip implements IEventDispatcher
 			}
 				break;
 
+			//rewardVideo
 			case MAXPrivateConst.RewardVideoDidLoad:
 			{
 				if(this.rewardVideoDidLoadListener != null){
@@ -498,8 +613,66 @@ public class MAXAdvert extends MovieClip implements IEventDispatcher
 
 			}
 				break;
+
+			//banner
+			case MAXPrivateConst.BannerDidLoad:{
+				if(this.bannerDidLoadListener != null){
+					this.bannerDidLoadListener();
+				}
+			}
+				break;
+
+			case MAXPrivateConst.BannerFailToLoad:{
+				if(this.bannerFailToLoadListener != null){
+					this.bannerFailToLoadListener();
+				}
+			}
+				break;
+
+			case MAXPrivateConst.BannerDisplay:{
+				if(this.bannerDisplayListener != null){
+					this.bannerDisplayListener();
+				}
+			}
+				break;
+
+			case MAXPrivateConst.BannerHide:{
+				if(this.bannerHideListener != null){
+					this.bannerHideListener();
+				}
+			}
+				break;
+
+			case MAXPrivateConst.BannerClick:{
+				if(this.bannerClickListener != null){
+					this.bannerClickListener();
+				}
+			}
+				break;
+
+			case MAXPrivateConst.BannerFailToDisplay:{
+				if(this.bannerFailToDisplayListener != null){
+					this.bannerFailToDisplayListener();
+				}
+			}
+				break;
+
+			case MAXPrivateConst.BannerDidCollapse:{
+				if(this.bannerDidCollapseListener != null){
+					this.bannerDidCollapseListener();
+				}
+			}
+				break;
+
+			case MAXPrivateConst.BannerDidExpandAd:{
+				if(this.bannerDidExpandAdListener != null){
+					this.bannerDidExpandAdListener();
+				}
+			}
+				break;
 		}
 	}
+
 	public function MAXAdvert(){
 		if (!extContext) {
 			extContext = ExtensionContext.createExtensionContext(EXTENSION_ID, null);

@@ -20,9 +20,16 @@
 #define SHOW_INTERSTITIAL   showInterstitial
 #define SHOW_INTERSTITIAL_FOR_PLACEMENT showInterstitialForPlacement
 
-#pragma mark -rewardVideo
+#pragma mark - rewardVideo
 #define LOAD_REWARDVIDEO   loadRewardVideo
 #define SET_REWARDVIDEO_EXTRA_PARAMETER setRewardVideoExtraParameter
 #define ISREADY_REWARDVIDEO    isReadyRewardVideo
 #define SHOW_REWARDVIDEO   showRewardVideo
 #define SHOW_REWARDVIDEO_FOR_PLACEMENT showRewardVideoForPlacement
+
+#pragma mark - banner
+#define LOAD_BANNER loadBanner
+#define SET_BANNER_EXTRA_PARAMETER setBannerExtraParameter
+#define HIDE_BANNER hideBanner
+#define SHOW_BANNER showBanner
+

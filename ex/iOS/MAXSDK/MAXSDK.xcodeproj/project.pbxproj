@@ -11,6 +11,7 @@
 		663018C82519FBE4009FF0F7 /* MAXAdvertANEUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 663018C42519FBE4009FF0F7 /* MAXAdvertANEUtils.m */; };
 		663018C92519FBE4009FF0F7 /* MAXAdvertANE.m in Sources */ = {isa = PBXBuildFile; fileRef = 663018C72519FBE4009FF0F7 /* MAXAdvertANE.m */; };
 		663018CC251A0103009FF0F7 /* MAXInterstitialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 663018CB251A0103009FF0F7 /* MAXInterstitialManager.m */; };
+		664F01CA2521D37200046087 /* MAXBannerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 664F01C92521D37200046087 /* MAXBannerManager.m */; };
 		665F2EE9251AF46500C6B7A0 /* MAXSdkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 665F2EE8251AF46500C6B7A0 /* MAXSdkManager.m */; };
 		665F2EEC251B180100C6B7A0 /* MAXRewardVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 665F2EEB251B180100C6B7A0 /* MAXRewardVideoManager.m */; };
 		666082AA236A86A70029F94F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666082A9236A86A60029F94F /* CoreFoundation.framework */; };
@@ -67,6 +68,8 @@
 		663018C72519FBE4009FF0F7 /* MAXAdvertANE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXAdvertANE.m; sourceTree = "<group>"; };
 		663018CA251A0103009FF0F7 /* MAXInterstitialManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAXInterstitialManager.h; sourceTree = "<group>"; };
 		663018CB251A0103009FF0F7 /* MAXInterstitialManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAXInterstitialManager.m; sourceTree = "<group>"; };
+		664F01C82521D37200046087 /* MAXBannerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAXBannerManager.h; sourceTree = "<group>"; };
+		664F01C92521D37200046087 /* MAXBannerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAXBannerManager.m; sourceTree = "<group>"; };
 		665F2EE7251AF46500C6B7A0 /* MAXSdkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAXSdkManager.h; sourceTree = "<group>"; };
 		665F2EE8251AF46500C6B7A0 /* MAXSdkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAXSdkManager.m; sourceTree = "<group>"; };
 		665F2EEA251B180100C6B7A0 /* MAXRewardVideoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAXRewardVideoManager.h; sourceTree = "<group>"; };
@@ -264,6 +267,8 @@
 				663018CB251A0103009FF0F7 /* MAXInterstitialManager.m */,
 				665F2EEA251B180100C6B7A0 /* MAXRewardVideoManager.h */,
 				665F2EEB251B180100C6B7A0 /* MAXRewardVideoManager.m */,
+				664F01C82521D37200046087 /* MAXBannerManager.h */,
+				664F01C92521D37200046087 /* MAXBannerManager.m */,
 			);
 			path = MAXAdvert;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 				669D94512510D6F600DDA687 /* JSONSerialization.m in Sources */,
 				663018C82519FBE4009FF0F7 /* MAXAdvertANEUtils.m in Sources */,
 				665F2EE9251AF46500C6B7A0 /* MAXSdkManager.m in Sources */,
+				664F01CA2521D37200046087 /* MAXBannerManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

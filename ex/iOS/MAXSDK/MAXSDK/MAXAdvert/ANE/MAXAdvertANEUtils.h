@@ -102,8 +102,16 @@ typedef enum {
     RewardVideoFailToDisplay,
     RewardVideoDidComplete = 13,
     RewardVideoDidReward,
-    RewardVideoDidStart
-    
+    RewardVideoDidStart,
+    //banner
+    BannerDidLoad,
+    BannerFailToLoad,
+    BannerDisplay,
+    BannerHide,
+    BannerClick,
+    BannerFailToDisplay,
+    BannerDidCollapse,
+    BannerDidExpandAd
     
 } MAXAdvertANEEvent;
 
@@ -128,10 +136,12 @@ NSString* const RewardVideoDidCompleteCode = @"rewardVideoDidComplete";
 NSString* const RewardVideoDidRewardCode = @"MAX_RewardVideoDidReward";
 NSString* const RewardVideoDidStartCode = @"MAX_RewardVideoDidStart";
 
-
-
-
-
-
-
-
+//banner
+NSString* const BannerDidLoadCode = @"MAX_BannerDidLoad";
+NSString* const BannerFailToLoadCode = @"MAX_BannerFailToLoad";
+NSString* const BannerDisplayCode = @"MAX_BannerDisplay";
+NSString* const BannerHideCode = @"MAX_BannerHide";
+NSString* const BannerClickCode = @"MAX_BannerClick";
+NSString* const BannerFailToDisplayCode = @"MAX_BannerFailToDisplay";
+NSString* const BannerDidCollapseCode = @"MAX_BannerDidCollapse";
+NSString* const BannerDidExpandAdCode = @"MAX_BannerDidExpandAd";

@@ -16,5 +16,11 @@ public class MAXFunctions {
 	public static const ISREADY_REWARDVIDEO:String = "isReadyRewardVideo";
 	public static const SHOW_REWARDVIDEO:String = "showRewardVideo";
 	public static const SHOW_REWARDVIDEO_FOR_PLACEMENT:String = "showRewardVideoForPlacement";
+
+	public static const LOAD_BANNER:String = "loadBanner";
+	public static const SET_BANNER_EXTRA_PARAMETER:String = "setBannerExtraParameter";
+	public static const HIDE_BANNER:String = "hideBanner";
+	public static const SHOW_BANNER:String = "showBanner";
+
 }
 }

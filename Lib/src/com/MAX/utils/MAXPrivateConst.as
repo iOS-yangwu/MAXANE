@@ -20,5 +20,14 @@ public class MAXPrivateConst {
 	public static const  RewardVideoDidReward:int = 14;
 	public static const  RewardVideoDidStart:int = 15;
 
+	public static const  BannerDidLoad:int = 15;
+	public static const  BannerFailToLoad:int = 15;
+	public static const  BannerDisplay:int = 15;
+	public static const  BannerHide:int = 15;
+	public static const  BannerClick:int = 15;
+	public static const  BannerFailToDisplay:int = 15;
+	public static const  BannerDidCollapse:int = 15;
+	public static const  BannerDidExpandAd:int = 15;
+
 }
 }
