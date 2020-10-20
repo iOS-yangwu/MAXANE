@@ -104,7 +104,7 @@ typedef enum {
     RewardVideoDidReward,
     RewardVideoDidStart,
     //banner
-    BannerDidLoad,
+    BannerDidLoad = 16,
     BannerFailToLoad,
     BannerDisplay,
     BannerHide,

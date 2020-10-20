@@ -17,7 +17,6 @@
 
     [[ALSdk shared] initializeSdkWithCompletionHandler:^(ALSdkConfiguration * _Nonnull configuration) {
         
-        [[ALSdk shared]showMediationDebugger];
         if (configuration.consentDialogState == ALConsentDialogStateApplies) {
             
             MAXAdvertSendANEMessage(InitializedConfig, InitializedConfigCode, @"", @"");

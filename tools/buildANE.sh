@@ -50,16 +50,23 @@ UnityAds="AppLovinMediationUnityAdsAdapter.framework UnityAds.framework"
 #cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Vungle/VungleSDK.framework tmp
 #Vungle="AppLovinMediationVungleAdapter.framework VungleSDK.framework"
 
-# System
-#cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/System/AppTrackingTransparency.framework tmp
-#System="AppTrackingTransparency.framework"
+# Nend
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Nend/AppLovinMediationNendAdapter.framework tmp
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Nend/NendAd.framework tmp
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Nend/NendAdResource.bundle tmp
+Nend="AppLovinMediationNendAdapter.framework NendAd.framework NendAdResource.bundle"
+
+# Maio
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Maio/AppLovinMediationMaioAdapter.framework tmp
+cp -r ../ex/iOS/MAXSDK/MAXSDK/ThirdLib/Maio/Maio.framework tmp
+Maio="AppLovinMediationMaioAdapter.framework Maio.framework "
 
 cp ./ios/libMAXSDK.a tmp
 
 cd tmp
 
 
-pathString="${Admob} ${Applovin} ${Facebook} ${IronSource} ${Pangle} ${UnityAds}"
+pathString="${Admob} ${Applovin} ${Facebook} ${IronSource} ${Pangle} ${UnityAds} ${Nend} ${Maio}"
 
 unzip ./MAXAdvertLib.swc
 
